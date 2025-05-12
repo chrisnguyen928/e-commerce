@@ -1,8 +1,10 @@
 import Stripe from 'stripe'
 import '../../../envConfig'
 
-const API_KEY = process.env.STRIPE_SECRET_KEY
-const stripe = new Stripe(API_KEY)
+const API_KEY = process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY
+const stripe = new Stripe(API_KEY, {
+    apiVersion: '2023-10-16'
+})
 
 // note: route syntax is specific to app route, making endpoints in page.js uses different syntax and utilizes handler functions
 export async function GET() {
