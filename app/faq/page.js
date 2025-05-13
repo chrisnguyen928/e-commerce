@@ -1,3 +1,5 @@
+'use client'
+
 export default function FaqPage() {
     return (
         <section className="faq-section">
